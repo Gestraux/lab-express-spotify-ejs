@@ -1,0 +1,16 @@
+<% artistArray.forEach(artistResult => { %>
+    <div class="eachArtist">
+        <h4><%- artistResult.name %></h4>
+        <a href="/albums/<%- artistResult.id %>">View Albums</a>
+        <img src="<%= url %>" alt="">
+        <% let url = '' %>
+        <% if(artistResult.images[0]) { %>
+            <% url = artistResult.images[0].url %>
+        <% } %>
+    </div>
+<% }) %>
+
+<% artistArray.forEach(artistResult => { %>
+    <h1> <%- artistResult.name %> </h1>
+    <img src="<%- artistResult.images[0].url %>" alt="">
+<% }) %>

@@ -1,0 +1,8 @@
+<ul>
+    <% tracksArray.forEach(trackResult => { %>
+    <h4><%= trackResult.name %></h4>
+    <audio controls>
+    <source src="<%= trackResult.preview_url %>">
+    </audio>
+    <% }) %>
+</ul>
